@@ -1,0 +1,199 @@
+/* Background with Image */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: url('images/background/BLUE.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(to right, #00c6f877, #ffcc008a);
+    padding: 13px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-links li a:hover {
+    color: #000;
+  }
+  
+  /* Sections */
+  .content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #0d19c21f;
+    animation: fadeIn 1s ease-in-out;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  /* Main Content */
+  .content {
+    text-align: center;
+    padding: 50px 20px;
+    flex: 1;
+    margin: 20px;
+    border-radius: 15px;
+    animation: fadeInUp 1.5s ease;
+    backdrop-filter: blur(8px);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Content heading style */
+  .content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f7d117; /* Yellow color */
+  }
+  
+  /* Content paragraph style */
+  .content p {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text */
+  }
+  
+  
+  /* Tourist Spot Boxes */
+  .tourist-spot {
+    background:  linear-gradient(to right, #00c6f877, #ffcc008a);
+    margin: 30px auto;
+    max-width: 1000px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .tourist-spot:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .tourist-spot img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #0047ab;
+    transition: transform 0.3s;
+  }
+  
+  .tourist-spot:hover img {
+    transform: scale(1.05);
+  }
+  
+  .tourist-spot h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .tourist-spot p {
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #00b7ff;
+    }
+    to {
+      text-shadow: 0 0 20px #ffffff, 0 0 30px #3cd8ff;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: auto;
+    box-shadow: 0 -4px 10px rgba(0, 87, 184, 0.5);
+  }
